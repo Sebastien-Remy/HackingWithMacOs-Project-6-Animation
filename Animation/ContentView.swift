@@ -9,23 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var dragAmount = CGSize.zero
+    @State private var isShowingRed = false
     
     var body: some View {
-        
-        Color.red
-            .frame(width: 300, height: 200)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .padding(200)
-            .offset(dragAmount)
-            .gesture(
-            DragGesture()
-                .onChanged { dragAmount = $0.translation}
-                .onEnded { _ in
-                    withAnimation(.default) {
-                        dragAmount = .zero}
+        VStack {
+            Button("Click me") {
+                withAnimation {
+                    isShowingRed.toggle()
                 }
-            )
+            }
+            if isShowingRed {
+                Rectangle()
+                    .fill(.red)
+                    .frame(width: 200, height: 200)
+//                    .transition(.scale)
+                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+            }
+        }
+        .frame(width: 300, height: 300)
         
         
     }
