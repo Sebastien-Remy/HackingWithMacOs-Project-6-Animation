@@ -9,28 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var animationAount = 1.0
+    @State private var animationAount = 0.0
     
     var body: some View {
-        print (animationAount)
-        return VStack {
-         
-            Stepper("Scale amount", value: $animationAount.animation(.easeInOut(duration: 1)), in: 1...10)
-            
-            Text("Click me")
-                .onTapGesture {
-                    animationAount += 1
+        
+        Text("Click me")
+            .onTapGesture {
+                withAnimation(.interpolatingSpring(stiffness: 5, damping: 1))  {
+                    animationAount += 360
                 }
-                .padding(40)
-                .background(.red)
-                .foregroundColor(.white)
-                .clipShape(Circle())
-                .padding(100)
-                .scaleEffect(animationAount)
-            
-        }
+            }
+            .padding(50)
+            .background(.red)
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .padding(100)
+            .rotation3DEffect(.degrees(animationAount), axis:   (x: 0, y: 1, z: 0))
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
