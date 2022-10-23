@@ -14,15 +14,36 @@ struct ContentView: View {
     var body: some View {
         Text("Click me")
             .onTapGesture {
-                animationAount += 1
+                //animationAount += 1
             }
             .padding(50)
             .background(.red)
             .foregroundColor(.white)
             .clipShape(Circle())
+            .overlay(
+            Circle()
+                .stroke(.red)
+                .scaleEffect(animationAount)
+                .opacity(2 - animationAount)
+                .animation(
+                    .easeOut(duration: 1)
+                    .repeatForever(autoreverses: false),
+                    value: animationAount
+                    )
+            )
             .padding(100)
-            .scaleEffect(animationAount)
-            .animation(.default, value: animationAount)
+            .onAppear {
+                animationAount = 2
+            }
+//            .blur(radius: 0.5)
+//            .animation(.default, value: animationAount)
+//            .animation(.easeOut, value: animationAount)
+//            .animation(.interpolatingSpring(stiffness: 50, damping: 1), value: animationAount)
+ //           .animation(.easeInOut(duration: 2)
+ //               .delay(1),
+ //                      value: animationAount)
+  //          .animation(.easeInOut(duration: 1)
+ //               .repeatForever(autoreverses: true), value: animationAount)
     }
     
 }
