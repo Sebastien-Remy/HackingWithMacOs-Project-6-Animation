@@ -11,6 +11,7 @@
 		96E9B73B29052E8C00F86883 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9B73A29052E8C00F86883 /* ContentView.swift */; };
 		96E9B73D29052E8D00F86883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E9B73C29052E8D00F86883 /* Assets.xcassets */; };
 		96E9B74029052E8D00F86883 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E9B73F29052E8D00F86883 /* Preview Assets.xcassets */; };
+		96E9B74829058D3C00F86883 /* CornerRotateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9B74729058D3C00F86883 /* CornerRotateModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		96E9B73C29052E8D00F86883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96E9B73F29052E8D00F86883 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96E9B74129052E8D00F86883 /* Animation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Animation.entitlements; sourceTree = "<group>"; };
+		96E9B74729058D3C00F86883 /* CornerRotateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRotateModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				96E9B73829052E8C00F86883 /* AnimationApp.swift */,
 				96E9B73A29052E8C00F86883 /* ContentView.swift */,
+				96E9B74729058D3C00F86883 /* CornerRotateModifier.swift */,
 				96E9B73C29052E8D00F86883 /* Assets.xcassets */,
 				96E9B74129052E8D00F86883 /* Animation.entitlements */,
 				96E9B73E29052E8D00F86883 /* Preview Content */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E9B73B29052E8C00F86883 /* ContentView.swift in Sources */,
+				96E9B74829058D3C00F86883 /* CornerRotateModifier.swift in Sources */,
 				96E9B73929052E8C00F86883 /* AnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
