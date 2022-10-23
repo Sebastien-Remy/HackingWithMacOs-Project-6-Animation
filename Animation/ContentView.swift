@@ -8,15 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var animationAount = 1.0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Text("Click me")
+            .onTapGesture {
+                animationAount += 1
+            }
+            .padding(50)
+            .background(.red)
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .padding(100)
+            .scaleEffect(animationAount)
+            .animation(.default, value: animationAount)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
